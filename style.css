@@ -1,57 +1,31 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background-color: black;
   background-image: url("assets/body.webp");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Input Section */
 
 #main {
-
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 #main h1 {
   font-size: 30px;
-  margin: 0px;
-  padding: 0px;
-  margin-bottom: 20px;
-    color:black;
-}
-
-#btn {
-  padding: 8px 15px;
-  background-color: rgb(21, 126, 60);
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#btn:hover {
-  background-color: rgb(37, 66, 114);
-}
-
-.img {
-  height: 300px;
-  width: 300px;
-}
-
-input {
-  display: block;
-  border: none;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  padding: 5px;
-  border-radius: 5px;
+  margin: 0 0 20px 0;
+  color: black;
+  text-align: center;
 }
 
 form {
@@ -60,65 +34,167 @@ form {
   gap: 10px;
 }
 
+input {
+  display: block;
+  border: none;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#btn {
+  padding: 10px 15px;
+  background-color: rgb(21, 126, 60);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+#btn:hover {
+  background-color: rgb(37, 66, 114);
+}
+
 /* Cards Section */
+
+#box {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
 #card {
   border: 2px solid #ffffff;
   background-color: rgba(0, 0, 0, 0.2);
-  height: 300px;
-  width: 200px;
+  width: 220px;
+  min-height: 320px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+  padding-bottom: 10px;
 }
 
 #card img {
-    padding-top: 10px;
+  margin-top: 10px;
   height: 150px;
   width: 150px;
   object-fit: cover;
- 
-  border-radius: 50%;
+  border-radius: 20%;
+  transition: 0.3s;
 }
 
-#card .name,
+#card img:hover {
+  transform: scale(1.05);
+}
+
+.name,
 .age,
 .email,
 .para {
   color: rgb(245, 244, 244);
-  margin: 0px;
-  width: 80%;
+  margin: 4px 0;
+  width: 85%;
   font-weight: 700;
   font-size: 13px;
-  padding: 1px;
   text-shadow:
     -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black;
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+  word-wrap: break-word;
 }
+
 .name {
-  font-size: 14px;
+  font-size: 15px;
 }
 
-#box {
-  padding: 10px;
-  height: 100%;
-  width: 100%;
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
 #boxChild {
-  height: 100px;
   width: 100%;
   color: white;
   display: flex;
   flex-direction: column;
-  flex-direction: start;
-  justify-content: flex-start;
   align-items: center;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 768px) {
+  #main {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  form {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #card {
+    width: 250px;
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 480px) {
+  #main {
+    padding: 15px;
+  }
+
+  #main h1 {
+    font-size: 24px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #btn {
+    font-size: 14px;
+  }
+
+  #box {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  #card {
+    width: 95%;
+    max-width: 300px;
+    min-height: auto;
+  }
+
+  #card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .name,
+  .age,
+  .email,
+  .para {
+    font-size: 12px;
+    width: 90%;
+  }
 }
