@@ -1,7 +1,7 @@
 # Student-ID-Card-Project
 A dynamic Student ID Card project built using HTML, CSS, and JavaScript DOM manipulation.
 Student ID Card Project
-
+LIVE LINK: https://md-raquib-hussain90.github.io/Student-ID-Card-Project/
 A simple and dynamic Student ID Card Generator project built using HTML, CSS, and JavaScript DOM. This project displays student information like image, name, age, email, and description dynamically using JavaScript.
 
 🚀 Features Dynamic Student ID Card DOM Manipulation using JavaScript Display Student Image Show Student Details: Name Age Email Description Responsive UI Beginner Friendly Project 🛠️ Technologies Used HTML5 CSS3 JavaScript (DOM) 📂 Project Structure project-folder/ │ ├── index.html ├── style.css ├── script.js └── images/ 📸 Preview
